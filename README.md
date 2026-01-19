@@ -1,5 +1,3 @@
-# elmahrosa-core
-The Central Governance Engine and Ecosystem Registry for the Elmahrosa Sovereign Blockchain.
 # 🏛️ elmahrosa-core
 
 **The Central Nervous System of the Elmahrosa Sovereign Ecosystem.**
