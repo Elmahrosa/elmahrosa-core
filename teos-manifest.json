@@ -1,0 +1,40 @@
+{
+  "schema": "teos.manifest.v1",
+  "name": "REPO_DISPLAY_NAME",
+  "repo": "Elmahrosa/REPO_NAME",
+  "role": "App",
+  "status": "active",
+  "version": "0.1.0",
+  "authority": {
+    "icbc": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution",
+    "tesl_canonical": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/LICENSE"
+  },
+  "stewardship": {
+    "teos_forge": "https://github.com/Elmahrosa/TEOS-FORGE",
+    "kernel": "https://github.com/Elmahrosa/elmahrosa-core"
+  },
+  "interfaces": {
+    "provides": [],
+    "consumes": []
+  },
+  "compliance": {
+    "jurisdictions": ["EG"],
+    "data_sensitivity": "internal",
+    "controls": [
+      "ICBC",
+      "TESL_CANONICAL",
+      "FORGE_STEWARDSHIP"
+    ]
+  },
+  "audit": {
+    "events": [],
+    "evidence_export": {
+      "formats": ["jsonl"],
+      "retention_days": 365
+    }
+  },
+  "contacts": {
+    "owner": "Ayman Seif",
+    "security": "ayman@teosegypt.com"
+  }
+}
