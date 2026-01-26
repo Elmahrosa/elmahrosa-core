@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Elmahrosa/elmahrosa-core/schemas/teos-manifest.schema.json",
+  "title": "TEOS Manifest",
+  "description": "Canonical manifest for TEOS/Elmahrosa ecosystem repositories governed by ICBC + TESL.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "name",
+    "repo",
+    "role",
+    "status",
+    "authority",
+    "stewardship",
+    "interfaces",
+    "compliance",
+    "audit"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "teos.manifest.v1"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "description": "GitHub repo in the form org/name"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["Core", "Module", "App", "Archive"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["canonical", "active", "beta", "prototype", "deprecated", "archived"]
+    },
+    "version": {
+      "type": "string",
+      "description": "SemVer recommended",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["icbc", "tesl_canonical"],
+      "properties": {
+        "icbc": { "type": "string", "format": "uri" },
+        "tesl_canonical": { "type": "string", "format": "uri" }
+      }
+    },
+    "stewardship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["teos_forge", "kernel"],
+      "properties": {
+        "teos_forge": { "type": "string", "format": "uri" },
+        "kernel": { "type": "string", "format": "uri" }
+      }
+    },
+    "interfaces": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provides", "consumes"],
+      "properties": {
+        "provides": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "default": []
+        },
+        "consumes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "default": []
+        }
+      }
+    },
+    "compliance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["jurisdictions", "data_sensitivity", "controls"],
+      "properties": {
+        "jurisdictions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "description": "e.g., ['EG']",
+          "default": ["EG"]
+        },
+        "data_sensitivity": {
+          "type": "string",
+          "enum": ["public", "internal", "restricted", "regulated"]
+        },
+        "controls": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "description": "Named controls or references to policy documents",
+          "default": []
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["events", "evidence_export"],
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "description": "Event types emitted by the repo/module",
+          "default": []
+        },
+        "evidence_export": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["formats", "retention_days"],
+          "properties": {
+            "formats": {
+              "type": "array",
+              "items": { "type": "string", "enum": ["jsonl", "csv", "pdf", "openapi", "sigstore"] },
+              "default": ["jsonl"]
+            },
+            "retention_days": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 365
+            }
+          }
+        }
+      }
+    },
+    "contacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "owner": { "type": "string" },
+        "security": { "type": "string" }
+      }
+    }
+  }
+}
