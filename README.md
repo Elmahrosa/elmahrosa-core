@@ -5,6 +5,14 @@
 `elmahrosa-core` is the master registry and governance anchor for all repositories within the Elmahrosa organization. It defines the relationships, compliance standards, and audit protocols that transform isolated applications into a unified, state-grade **Sovereign Software Factory**.
 
 ---
+## 🏛️ Constitutional Authority
+
+This repository derives its authority from the
+**International Civic Blockchain Constitution (ICBC)**:
+
+https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution
+
+Any implementation or use must comply with ICBC and TESL.
 
 ## 🌐 Ecosystem Map
 
