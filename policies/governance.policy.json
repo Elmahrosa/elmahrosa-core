@@ -1,0 +1,88 @@
+{
+  "policy": "teos.governance.policy.v1",
+  "effective_date": "2026-01-26",
+  "authority": {
+    "icbc": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution",
+    "tesl_canonical": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/LICENSE",
+    "teos_forge": "https://github.com/Elmahrosa/TEOS-FORGE",
+    "kernel": "https://github.com/Elmahrosa/elmahrosa-core"
+  },
+  "binding_chain_of_authority": [
+    "ICBC",
+    "TEOS-FORGE",
+    "ELMAHROSA-CORE",
+    "EXECUTION-LAYERS"
+  ],
+  "requirements": {
+    "repo_must_link_icbc": true,
+    "repo_must_link_tesl_canonical": true,
+    "repo_must_declare_manifest": true,
+    "repo_must_pass_ci_for_merge": true,
+    "repo_main_branch_protection_required": true,
+    "repo_signed_commits_recommended": true
+  },
+  "branch_protection_minimums": {
+    "branch": "main",
+    "require_pull_request_reviews": true,
+    "minimum_approvals": 1,
+    "require_status_checks": true,
+    "restrict_direct_pushes": true
+  },
+  "visibility_policy": {
+    "Core": {
+      "default": "public",
+      "exceptions_allowed": false
+    },
+    "Module": {
+      "default": "public",
+      "exceptions_allowed": true,
+      "exception_reason_required": true
+    },
+    "App": {
+      "default": "private",
+      "exceptions_allowed": true,
+      "exception_reason_required": true
+    },
+    "Archive": {
+      "default": "public",
+      "exceptions_allowed": true,
+      "exception_reason_required": false
+    }
+  },
+  "compliance_controls": {
+    "manifest_required_fields": [
+      "schema",
+      "name",
+      "repo",
+      "role",
+      "status",
+      "authority.icbc",
+      "authority.tesl_canonical",
+      "stewardship.teos_forge",
+      "stewardship.kernel",
+      "interfaces.provides",
+      "interfaces.consumes",
+      "compliance.jurisdictions",
+      "compliance.data_sensitivity",
+      "audit.events",
+      "audit.evidence_export.formats",
+      "audit.evidence_export.retention_days"
+    ],
+    "data_sensitivity_rules": {
+      "public": "No regulated data. Documentation and standards are allowed.",
+      "internal": "Non-public operational details. Keep private unless approved.",
+      "restricted": "Sensitive system details, credentials, deployment info. Private only.",
+      "regulated": "Any personal/financial/health or regulated datasets. Private only + documented controls."
+    }
+  },
+  "enforcement": {
+    "non_compliant_repo_state": "unauthorized",
+    "actions": [
+      "block_merge_if_manifest_missing",
+      "block_merge_if_ci_fails",
+      "flag_repo_if_no_icbc_link",
+      "flag_repo_if_license_not_canonical",
+      "require_exception_reason_for_visibility_override"
+    ]
+  }
+}
