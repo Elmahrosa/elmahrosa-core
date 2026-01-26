@@ -1,8 +1,8 @@
 {
   "schema": "teos.manifest.v1",
-  "name": "REPO_DISPLAY_NAME",
-  "repo": "Elmahrosa/REPO_NAME",
-  "role": "App",
+  "name": "elmahrosa-core",
+  "repo": "Elmahrosa/elmahrosa-core",
+  "role": "Core",
   "status": "active",
   "version": "0.1.0",
   "authority": {
@@ -14,27 +14,17 @@
     "kernel": "https://github.com/Elmahrosa/elmahrosa-core"
   },
   "interfaces": {
-    "provides": [],
-    "consumes": []
+    "provides": ["ecosystem.registry", "manifest.schema", "governance.policy"],
+    "consumes": ["icbc.constitution", "tesl.license", "forge.stewardship"]
   },
   "compliance": {
     "jurisdictions": ["EG"],
-    "data_sensitivity": "internal",
-    "controls": [
-      "ICBC",
-      "TESL_CANONICAL",
-      "FORGE_STEWARDSHIP"
-    ]
+    "data_sensitivity": "public",
+    "controls": ["ICBC", "TESL_CANONICAL", "FORGE_STEWARDSHIP", "BRANCH_PROTECTION"]
   },
   "audit": {
-    "events": [],
-    "evidence_export": {
-      "formats": ["jsonl"],
-      "retention_days": 365
-    }
+    "events": ["registry.updated", "policy.updated", "schema.updated"],
+    "evidence_export": { "formats": ["jsonl"], "retention_days": 365 }
   },
-  "contacts": {
-    "owner": "Ayman Seif",
-    "security": "ayman@teosegypt.com"
-  }
+  "contacts": { "owner": "Ayman Seif", "security": "ayman@teosegypt.com" }
 }
