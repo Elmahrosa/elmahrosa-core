@@ -1,0 +1,299 @@
+{
+  "schema": "teos.ecosystem-map.v1",
+  "generated_at": "2026-01-26",
+  "authority": {
+    "icbc": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution",
+    "tesl_canonical": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/LICENSE",
+    "stewardship": "https://github.com/Elmahrosa/TEOS-FORGE",
+    "kernel": "https://github.com/Elmahrosa/elmahrosa-core"
+  },
+  "classification_rules": {
+    "Core": "Sovereign standards, governance, compliance, kernel, API gateway; must be constitutionally linked and branch-protected.",
+    "Module": "Reusable subsystem (AI guard/audit/identity/security) governed by Core.",
+    "App": "Service/product layer; may be private until maturity.",
+    "Archive": "Deprecated, historical, or superseded; should be archived not deleted."
+  },
+  "repositories": [
+    {
+      "name": "International-Civic-Blockchain-Constitution",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "canonical",
+      "notes": "Highest constitutional authority (ICBC) + canonical TESL source."
+    },
+    {
+      "name": "elmahrosa-core",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Sovereign execution kernel & ecosystem registry."
+    },
+    {
+      "name": "TEOS-FORGE",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Lifecycle governance & sovereign software factory stewardship."
+    },
+    {
+      "name": "TEOS-Compliance-Kit",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Compliance framework & enforcement patterns (non-legal advice)."
+    },
+    {
+      "name": "TEOS-API-Sovereign",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Governed API & SDK gateway."
+    },
+    {
+      "name": "Teos-Sovereign-System",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Sovereign execution framework / deployment kernel."
+    },
+    {
+      "name": "TEOS-Governance",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Policy & decision authority layer."
+    },
+    {
+      "name": "TEOS-AI-Guard",
+      "role": "Module",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "AI safety & enforcement module."
+    },
+    {
+      "name": "TEOS-AI-Auditor",
+      "role": "Module",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Audit & evidence export module."
+    },
+    {
+      "name": "TEOS-Identity-Insight-AI",
+      "role": "Module",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Identity defense & risk intelligence module."
+    },
+
+    {
+      "name": ".github",
+      "role": "Core",
+      "visibility_recommended": "public",
+      "status": "active",
+      "notes": "Org-wide issue templates, security policy, community health files."
+    },
+    {
+      "name": "TEOS-Global-Civic-Blockchain-Ecosystem",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Ecosystem monorepo; keep private unless it becomes the single public monorepo."
+    },
+    {
+      "name": "Teos-Pharaoh-Portal",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Portal / gateway; product-layer."
+    },
+    {
+      "name": "Teos-Sovereign-Wallet",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Wallet + governance integrations; product-layer."
+    },
+    {
+      "name": "Teospump",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Launchpad/liquidity engine; product-layer."
+    },
+    {
+      "name": "TeosPitaxi",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Mobility smart-city application."
+    },
+    {
+      "name": "TeosEgypt-DomainPlatform",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Domain/Web3 platform; service-layer."
+    },
+    {
+      "name": "TeosEgypt-AI-Travel-OS",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Travel OS; product-layer."
+    },
+    {
+      "name": "Teos-Pi-Smart-City",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Pi-integrated smart-city engine."
+    },
+    {
+      "name": "TEOS-Payment-Rail",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Payments rail; operational implementation."
+    },
+    {
+      "name": "TEOS-NFT-AI-Generator",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "NFT generation tooling; service-layer."
+    },
+    {
+      "name": "Teos-Integration",
+      "role": "Archive",
+      "visibility_recommended": "public",
+      "status": "archive_recommended",
+      "notes": "Likely superseded by ecosystem monorepo; archive instead of delete."
+    },
+    {
+      "name": "Teos-Gold-Reserve",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Reserve/tangible asset module; treat as sensitive until fully documented."
+    },
+    {
+      "name": "Teos-Bankchain",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Digital banking engine; keep private until compliance documentation is complete."
+    },
+    {
+      "name": "Teos-Bankchain-Mobile",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Mobile banking app; private by default."
+    },
+    {
+      "name": "Teos-App-Studio",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "App studio; dev tooling/product layer."
+    },
+    {
+      "name": "salma-unity-care-hospital",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Health/HIS; sensitive domain—keep private."
+    },
+    {
+      "name": "Nilex",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Service-layer; keep private until definition is stable."
+    },
+    {
+      "name": "Mine_alltokens",
+      "role": "Archive",
+      "visibility_recommended": "public",
+      "status": "archive_recommended",
+      "notes": "Legacy/experimental; archive recommended."
+    },
+    {
+      "name": "hk-consensus-2026-teos",
+      "role": "Archive",
+      "visibility_recommended": "public",
+      "status": "archive_recommended",
+      "notes": "Event-specific; archive recommended."
+    },
+    {
+      "name": "Teos-Sat-Sovereign-System",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Satellite/variant system; keep private until it is clarified/specified."
+    },
+
+    {
+      "name": "FPBE-First-Pimisr-Bank-Elmahrosa",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Bank concept; private by default."
+    },
+    {
+      "name": "ERT-LAUNCH",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Launch tooling; private until release."
+    },
+    {
+      "name": "ElMahrosa-Pi-Smart-City",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Smart-city implementation; private by default."
+    },
+    {
+      "name": "Elmahrosa-Map-of-PI",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Geospatial mapping; private until data/IP review."
+    },
+    {
+      "name": "Elmahrosa-Blockchain",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Generic blockchain repo; treat as internal until clarified."
+    },
+    {
+      "name": "Digital-Reconstruction-of-Gaza",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "Sensitive civic reconstruction blueprint; private by default."
+    },
+    {
+      "name": "Ask-Teos-AI",
+      "role": "App",
+      "visibility_recommended": "private",
+      "status": "active",
+      "notes": "AI product; private until governance & safety docs are complete."
+    },
+
+    {
+      "name": "TEOS-AI-Guardrails",
+      "role": "Archive",
+      "visibility_recommended": "public",
+      "status": "not_listed",
+      "notes": "Placeholder for future; remove entry if repo does not exist."
+    }
+  ],
+  "validation": {
+    "required_manifest": "teos-manifest.json",
+    "manifest_schema_path": "schemas/teos-manifest.schema.json",
+    "policy_path": "policies/governance.policy.json"
+  }
+}
