@@ -6,7 +6,7 @@
 
 </div>
 
-# 🏛️ elmahrosa-core
+# 🏛️ Elmahrosa-Core
 **Sovereign Execution Kernel & Ecosystem Registry**
 
 `elmahrosa-core` is the canonical **execution kernel** and **ecosystem registry** for the Elmahrosa / TEOS sovereign stack.  
